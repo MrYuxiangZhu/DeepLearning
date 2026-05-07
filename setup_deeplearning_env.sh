@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 指定需要激活的 Conda 环境名称。
-CONDA_ENV_NAME="deep_speed_py11"
+CONDA_ENV_NAME="deep_learning_py11"
 
 # 指定 pip 镜像源，这里使用清华源加速下载。
 PIP_INDEX_URL="https://pypi.tuna.tsinghua.edu.cn/simple"
