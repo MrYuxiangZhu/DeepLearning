@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 指定需要激活的 Conda 环境名称。
-CONDA_ENV_NAME="deep_learning_py11"
+CONDA_ENV_NAME="deep_speed_py11"
 
 # 指定 pip 镜像源，这里使用清华源加速下载。
 PIP_INDEX_URL="https://pypi.tuna.tsinghua.edu.cn/simple"
@@ -92,6 +92,7 @@ PACKAGES=(
   "tensorboard-data-server==0.7.2"
   "tokenizers==0.22.2"
   "torch==2.9.1"
+  "torchvision==0.24.1"
   "tqdm==4.67.1"
   "transformers==4.57.5"
   "triton==3.5.1"
