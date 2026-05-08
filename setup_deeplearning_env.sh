@@ -18,6 +18,8 @@ echo "Starting dependency installation. Current target environment: ${CONDA_ENV_
 echo "====================================="
 
 # 定义依赖列表，后续通过循环逐个安装，结构更清晰，也更容易维护。
+# 说明：以下已覆盖 video_human_animal_detector.py 等示例所需库——
+# torch、torchvision、transformers、pillow、tqdm、opencv-python（其中 opencv-python 专用于 OpenCV 视频读写）。
 PACKAGES=(
   "absl-py==2.3.1"
   "accelerate==1.12.0"
@@ -54,6 +56,7 @@ PACKAGES=(
   "networkx==3.6.1"
   "ninja==1.13.0"
   "numpy==2.4.1"
+  "opencv-python==4.10.0.84"
   "nvidia-cublas-cu12==12.8.4.1"
   "nvidia-cuda-cupti-cu12==12.8.90"
   "nvidia-cuda-nvrtc-cu12==12.8.93"
@@ -158,6 +161,7 @@ echo "Verifying core dependency versions:"
 "${PIP_CMD[@]}" show deepspeed | awk '/^Version:/{print "deepspeed Version:", $2}'
 "${PIP_CMD[@]}" show transformers | awk '/^Version:/{print "transformers Version:", $2}'
 "${PIP_CMD[@]}" show torch | awk '/^Version:/{print "torch Version:", $2}'
+"${PIP_CMD[@]}" show opencv-python | awk '/^Version:/{print "opencv-python Version:", $2}'
 
 # 输出结束标识。
 echo
