@@ -1,0 +1,32 @@
+# ========================== 通用目录忽略 ==========================
+# 项目通用输出/工作目录
+outputs/
+work_dir/
+workspace/
+output/
+get /
+node_modules/
+.pnpm-store/
+dist/
+.vscode/
+
+# ========================== 通用文件类型忽略 ==========================
+# Python编译文件（核心优化：** 覆盖所有子目录）
+**/__pycache__/
+**/*.pyc
+
+# 临时/缓存/日志文件
+*.log
+*.swp
+**/*.swp       # 所有层级的.swp文件
+.cursorignore
+
+# 数据/配置文件
+*.csv
+*_0.json
+launch.json
+
+# Conan构建文件
+conan.lock
+conaninfo.txt
+conanbuildinfo.txt
